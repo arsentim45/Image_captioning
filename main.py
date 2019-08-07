@@ -28,9 +28,10 @@ if __name__ == '__main__':
     parser.add_argument('-n', '--number_of_images', default=10, type=int, help='number of images to download')
     parser.add_argument('-s', '--section', default='', type=str, help='type of pictures to search for')
     parser.add_argument('-f', '--folder', default='', type=str, help='folder where to download')
-    parser.add_argument('-g', '--get_data', default=False, type=bool, help='return data from database or no(False/True')
+    parser.add_argument('-g', '--get_data', default=False, type=bool,
+                        help='return data from database or no(False/True)')
     parser.add_argument('-d', '--download_data', default=True, type=bool,
-                        help='put data into database or no(False/True')
+                        help='put data into database or no(False/True)')
     args = parser.parse_args()
     params = vars(args)
     main(params)
