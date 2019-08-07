@@ -1,5 +1,7 @@
 import sqlite3
-def main():
+
+
+def creator():
     conn = sqlite3.connect("main_database.db")
     cursor = conn.cursor()
     try:
@@ -7,5 +9,7 @@ def main():
         conn.commit()
     except sqlite3.OperationalError:
         print('Database already exist')
+
+
 if __name__ == '__main__':
-    main()
+    creator()
